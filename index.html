@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="scripts/mainWindowCheck.js"> </script>
+	<script src="scripts/screenBlocker.js"> </script>
+	<title>Hitman Roulette</title>
+</head>
+
+<body onresize="windowWidth()">
+	<div id="loading-blocker" class=""> 
+ 		<div id="loading-heading"> 
+ 			<span id="logoText">
+ 				<h3>H I T M A N    R O U L E T T E</h3>
+ 				<h4 id="loadingText">Loading Episodes</h4>
+ 			</span>
+ 		</div>
+ 	</div>
+	<div id="container">
+		<div id="logo">
+			<span id="logoText">H I T M A N    R O U L E T T E</span>
+			<img src="img/ui/logo.png" style="padding-top:10px">
+			<a href="http://felkon.github.io/HitmanRoulette" style="padding-top:10px"> Felkon.github.io/HitmanRoulette/ </a>
+		</div>
+		<div id="episodes" class=""> 
+			<a href="#" onclick="locationCheck('paris')" script"s" id="episode-paris" class="main-episodes">
+				<div id="episode-paris-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>PARIS<br/> </h1>
+					<h2>FRANCE</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('sapienza')" id="episode-sapienza" class="main-episodes">
+				<div id="episode-sapienza-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>SAPIENZA<br/> </h1>
+					<h2>ITALY</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('marrakesh')" id="episode-marrakesh" class="main-episodes">
+				<div id="episode-marrakesh-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>MARRAKESH<br/> </h1>
+					<h2>MOROCCO</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('bangkok')" id="episode-bangkok" class="main-episodes">
+				<div id="episode-bangkok-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>BANGKOK<br/> </h1>
+					<h2>THAILAND</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('colorado')" id="episode-colorado" class="main-episodes">
+				<div id="episode-colorado-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>COLORADO<br/> </h1>
+					<h2>USA</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('hokkaido')" id="episode-hokkaido" class="main-episodes">
+				<div id="episode-hokkaido-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>HOKKAIDO<br/> </h1>
+					<h2>JAPAN</h2>
+				</div>
+			</a>
+			<a href="#" onclick="swapMainViews()" id="episode-bonus" class="main-episodes">
+				<div id="episode-bonus-image" class="episode-image-location"> </div>
+				<div class="episode-info" >
+					<h1 id="bonus-h1">BONUS <br/> EPISODES </h1>
+					<h2 id="bonus-h2">+ TRAINING</h2>
+				</div>
+			</a>			
+		</div>
+
+
+
+		<div id="episodes2" style="display: none">
+			<a href="#" onclick="swapMainViews()" id="episode-main" class="main-episodes">
+				<div id="episode-main-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1 id="bonus-h1">MAIN <br/> EPISODES </h1>
+					<h2>SEASON 1</h2>
+				</div>
+			</a>			
+			<a href="#" onclick="locationCheck('training')" id="episode-training" class="main-episodes">
+				<div id="episode-training-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>FREEFORM <br/> TRAINING</h1>
+					<h2>ICA TRAINING FACILITY</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('test')" id="episode-test" class="main-episodes">
+				<div id="episode-test-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>THE FINAL <br/> TEST</h1>
+					<h2>ICA TRAINING FACILITY</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('icon')" id="episode-icon" class="main-episodes">
+				<div id="episode-icon-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>THE ICON<br/> </h1>
+					<h2>SAPIENZA</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('sand')" id="episode-sand" class="main-episodes">
+				<div id="episode-sand-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>A HOUSE BUILT <br/> ON SAND</h1>
+					<h2>MARRAKESH</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('holiday')" id="episode-holiday" class="main-episodes">
+				<div id="episode-holiday-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>HOLIDAY <br/> HOARDERS</h1>
+					<h2>PARIS</h2>
+				</div>
+			</a>
+			<a href="#" onclick="locationCheck('landslide')" id="episode-landslide" class="main-episodes">
+				<div id="episode-landslide-image" class="episode-image-location"> </div>
+				<div class="episode-info">
+					<h1>LANDSLIDE<br/> </h1>
+					<h2>SAPIENZA</h2>
+				</div>
+			</a>
+
+		</div>
+	</div>
+
+	<footer>
+		HITMAN™, HITMAN™ LOGO, IMAGES AND TEXT ARE THE PROPERTY OF IO INTERACTIVE
+	</footer>
+</body>
+
+<script>
+	window.onload = function() {
+		initWidth();
+		initBlocker();
+	}
+
+	function locationCheck(location) {
+		sessionStorage.setItem('forwardToLocation', location);
+		sessionStorage.getItem('forwardToLocation');
+		console.log(location);
+		console.log(sessionStorage.getItem('forwardToLocation'));
+		
+		document.getElementById('loadingText').innerHTML ="Loading Roulette Options";	
+		clearScreen();
+		setTimeout(loadNewPage,1000);
+	}
+	
+	function loadNewPage() {
+		window.location.href = "roulette.html"				
+	}
+</script>

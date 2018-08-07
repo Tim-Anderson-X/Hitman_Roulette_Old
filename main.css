@@ -1,0 +1,241 @@
+@font-face{
+	font-family: "HITMAN";
+	src: url(font/hitmen.otf) format("OpenType");
+}
+
+html {
+	background-image: url("img/ui/bg.png");
+	color: white;
+	font-family: "HITMAN";
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover {
+	color: #A39991;
+}
+
+h1 {
+	margin: 5px;
+	font-size: 28px;
+	color: black;
+	text-align: center;
+}
+
+h2 {
+	margin: 5px;
+	font-size: 16px;
+	color: gray;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	font-size: 40px;
+	padding-top: 300px;
+}
+
+h4 {
+	text-align: center;
+	font-size: 20px;
+}
+
+footer {
+	font-family: "HITMAN";
+	color: gray;
+	text-align: center;
+	font-size: 12px;
+}
+
+#container {
+	/*background-color: orange;*/
+	padding-top: 35px; 
+	margin: 0 auto;
+	max-width: 95%;
+}
+
+#container2 {
+	/*background-color: orange;*/
+	padding-top: 35px; 
+	margin: 0 auto;
+	max-width: 95%;
+}
+
+#logo {
+	/*background-color: gray;*/
+	margin: 0 auto;
+	text-align: center;
+	font-family: "HITMAN";
+	color: white;
+	font-size: 14pt;
+	max-width: 500px;
+}
+
+#logoText {
+	font-family: "HITMAN";
+    white-space:pre; // or pre-wrap if you want wrapping to still work.
+}
+
+#episodes {
+	margin: 0 auto;
+	margin-top: 40px;
+	/*background-color: red;*/
+	/*height: 600px;*/
+	display: flex;
+	flex-direction: row;
+	font-family: "HITMAN";
+}
+
+#episodes2 {
+	margin: 0 auto;
+	margin-top: 40px;
+	/*background-color: red;*/
+	/*height: 600px;*/
+	display: flex;
+	flex-direction: row;
+	font-family: "HITMAN";
+}
+
+.main-episodes {
+	background-color: white;
+	color: black;
+	width: 16%;
+	border-radius: 7px;
+	margin: 15px;
+	background-position: center top;
+	min-width: 195px;
+}
+
+
+.episode-image-location {
+	background-position: center top;
+	height: 450px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#loading-blocker {
+	background-image: url("img/ui/bg.png");
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	height: 95%;
+	padding-top: 35px;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+
+}
+
+#top-half {
+	width: 100%;
+}
+
+#bottom-half {
+	width: 100%;
+}
+
+.episode-bonus {
+	cursor: pointer;
+}
+
+#left-arrow {
+	float: right;
+	width: 48px;
+	height: 48px;
+}
+
+/*SMALLER DESKTOP CSS*/
+@media only screen and (min-width: 1081px) and ( max-width: 1910px) {
+
+	#episodes {
+		flex-flow: row wrap; 
+		justify-content: center;
+		width: 100%;
+	}
+
+	#episodes {
+		flex-flow: row wrap; 
+		justify-content: center;
+		width: 100%;
+	}
+
+	#episodes2 {
+		flex-flow: row wrap; 
+		justify-content: center;
+		width: 100%;
+	}
+
+/*	#episode-bonus {
+		float: right;
+		flex-flow: column;
+		justify-content: center;
+		width: 42%;
+	}*/
+
+	.main-episodes {
+		float: left;
+		min-width: 20%;
+	}
+
+	.episode-image-location {
+		height: 200px;
+		width: 100%;
+	}
+
+	#bonus-h1 {
+		content: " TEST EPISODES "; 
+	}
+}
+
+/*MOBILE CSS*/
+@media only screen and (max-width: 1080px) {
+
+	#episodes {
+		flex-direction: column;
+	}
+	#episodes2 {
+		flex-direction: column;
+	}	
+
+	#loading-blocker {
+		height: 200%	
+	}
+
+	.main-episodes {
+		float: left;
+		width: 100%;
+		margin-left: 0px;
+		min-width: 750px;
+	}
+
+	.episode-image-location {
+		height: 200px;
+  		float: left;
+		width: 75%;
+	}
+
+	.episode-info {
+		margin-top: 50px;
+		width: 100%;
+	}
+
+	h1 {
+		margin: 0px;
+
+	}
+	
+	h2 {
+		margin: 0px;
+
+	}
+}
+
